@@ -1,6 +1,6 @@
 ---
 name: amaltash-trading
-description: Use when the user wants to do anything on their Amaltash trading account from Claude — sign in / authenticate, create or fine-tune a trading strategy from an idea, run a backtest, deploy or undeploy a strategy, provision a paper account, finish KYC, connect a bank, or deposit / withdraw / check balance. Triggers on "Amaltash", "my trading account", "backtest my strategy", "deploy this strategy", "fund my account", "connect my bank", "paper trading account".
+description: Use when the user wants to do anything on their Amaltash trading account from Claude — sign in / authenticate, create or fine-tune a trading strategy from an idea, run a backtest, deploy or undeploy a strategy, provision a paper account, finish KYC, connect a bank, or deposit / check balance. Triggers on "Amaltash", "my trading account", "backtest my strategy", "deploy this strategy", "fund my account", "connect my bank", "paper trading account".
 ---
 
 # Amaltash trading via the MCP server
@@ -38,15 +38,15 @@ instead send a personal `amat_…` token as a Bearer header — see the README.)
 | Balance + why cash isn't all withdrawable | `balance_detail` |
 | Connected banks | `list_banks` |
 | Add money | `deposit_funds` (ACH if a bank is linked, else a Plaid connect link, or `method="wire"`) |
-| Take money out | `withdraw_funds` (needs `confirm=true`) |
+| Take money out | Not available from Claude. Withdrawals happen in the Amaltash app. |
 
 ## Important behaviours
 - **Deep-links, not headless actions.** KYC, bank connection (Plaid), and live
   exchange OAuth can't be completed headlessly. For those, call `connect_links`
   and give the user the relevant URL to finish in their signed-in browser.
-- **Money moves need confirmation.** Never call `withdraw_funds` with
-  `confirm=true` (or `deploy_strategy` live) until the user has explicitly
-  approved the amount. Default to paper (`paper_trade=true`) when unsure.
+- **Money moves need confirmation.** Never start a deposit (or
+  `deploy_strategy` live) until the user has explicitly approved the amount.
+  Withdrawals aren't possible from Claude (removed in AMA-10236). Default to paper (`paper_trade=true`) when unsure.
 - **Streamed tools** (`create_strategy`, `fine_tune_strategy`,
   `backtest_strategy`, `provision_paper_account`) emit progress as they run —
   relay it. `backtest_strategy` returns a downsampled `equity_curve`
