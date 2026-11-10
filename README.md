@@ -35,6 +35,25 @@ shell).
 
 ---
 
+## Free calculators (no sign-in)
+
+Free compound interest, investment, retirement, CD, S&P 500 and DCA
+calculators in your chat, with charts you can change.
+
+The plugin also adds a second server, **amaltash-calculators**
+(`https://tools.amaltash.com/mcp`). It needs no account and no sign-in.
+Try: *"How much will $500 a month grow to in 20 years?"*
+
+Docs: [amaltash.com/mcp/calculators](https://amaltash.com/mcp/calculators)
+
+Want only the calculators? Add them on their own:
+
+```bash
+claude mcp add --transport http amaltash-calculators https://tools.amaltash.com/mcp
+```
+
+---
+
 ## Try it — sample prompts
 
 Just talk to Claude normally. A few to get you going:

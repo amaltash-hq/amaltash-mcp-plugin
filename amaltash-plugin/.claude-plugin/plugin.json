@@ -1,11 +1,20 @@
 {
   "name": "amaltash",
-  "version": "0.2.1",
-  "description": "Trade on Amaltash from Claude via the hosted Amaltash MCP server: create/backtest/fine-tune/deploy strategies, provision a $25K paper account, finish KYC, connect banks via Plaid, and manage deposits/withdrawals. Connect in one click with OAuth — no token to copy.",
+  "version": "0.3.0",
+  "description": "Trade on Amaltash from Claude via the hosted Amaltash MCP server: create/backtest/fine-tune/deploy strategies, provision a $25K paper account, finish KYC, connect banks via Plaid, and manage deposits/withdrawals. Connect in one click with OAuth — no token to copy. Also adds free investment and retirement calculators (no sign-in) via tools.amaltash.com.",
   "author": {
     "name": "Amaltash",
     "url": "https://amaltash.com"
   },
   "homepage": "https://github.com/arpwal/amaltash-mcp-plugin/tree/main/amaltash-plugin",
-  "keywords": ["amaltash", "trading", "brokerage", "mcp", "strategies"]
+  "keywords": [
+    "amaltash",
+    "trading",
+    "brokerage",
+    "mcp",
+    "strategies",
+    "calculators",
+    "retirement",
+    "compound-interest"
+  ]
 }
