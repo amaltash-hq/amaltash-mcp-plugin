@@ -6,9 +6,9 @@ Free finance calculators inside Claude. Ask a money question. Get the math and
 a chart you can change. No account needed.
 
 <!-- Demo video, AMA-10800 (2026-11-10). -->
-[![Watch the demo: Amaltash calculators in an AI chat (1:25)](media/demo-still.png)](https://youtu.be/_vZFEhk1ZRY)
+[![Watch the demo: Amaltash calculators in an AI chat (1:25)](media/demo-still.png)](https://youtu.be/CpCs-4aTJyc)
 
-**[Watch the demo on YouTube](https://youtu.be/_vZFEhk1ZRY)** (1:25)
+**[Watch the demo on YouTube](https://youtu.be/CpCs-4aTJyc)** (1:25)
 
 ## Install
 
