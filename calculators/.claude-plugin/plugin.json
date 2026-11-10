@@ -1,0 +1,23 @@
+{
+  "name": "calculators",
+  "displayName": "Amaltash Investment & Retirement Calculators",
+  "version": "0.4.0",
+  "description": "Free compound interest, investment, retirement, CD, S&P 500 and DCA calculators in your chat, with charts you can change. No sign-in.",
+  "author": {
+    "name": "Amaltash Advisors LLC",
+    "url": "https://amaltash.com"
+  },
+  "homepage": "https://amaltash.com/mcp/calculators",
+  "privacyPolicyUrl": "https://amaltash.com/policies/privacy#calculators-connector",
+  "repository": "https://github.com/amaltash-hq/amaltash-mcp-plugin",
+  "keywords": [
+    "calculators",
+    "compound-interest",
+    "investment",
+    "retirement",
+    "savings",
+    "net-worth",
+    "dca",
+    "mcp"
+  ]
+}

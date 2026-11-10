@@ -1,0 +1,19 @@
+{
+  "name": "trading",
+  "displayName": "Amaltash Trading",
+  "version": "0.4.0",
+  "description": "Trade on Amaltash from Claude via the hosted Amaltash MCP server: create/backtest/fine-tune/deploy strategies, provision a $25K paper account, finish KYC, connect banks via Plaid, deposit from a linked bank, and check balances. It can never withdraw money; withdrawals happen only in your Amaltash dashboard. Connect in one click with OAuth — no token to copy.",
+  "author": {
+    "name": "Amaltash",
+    "url": "https://amaltash.com"
+  },
+  "homepage": "https://github.com/amaltash-hq/amaltash-mcp-plugin/tree/main/trading",
+  "privacyPolicyUrl": "https://amaltash.com/policies/privacy",
+  "keywords": [
+    "amaltash",
+    "trading",
+    "brokerage",
+    "mcp",
+    "strategies"
+  ]
+}

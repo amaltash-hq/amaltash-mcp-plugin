@@ -1,141 +1,84 @@
-# Amaltash for Claude
+# Amaltash Investment & Retirement Calculators
 
-Run your [Amaltash](https://amaltash.com) investing account straight from a
-conversation with Claude. Describe a strategy in plain English, have Claude
-backtest it, paper-trade it with $25,000 of simulated cash, fund a live account,
-and check balances — all by just asking. **No coding, no tokens to copy — just
-install it and approve once in your browser.**
+![Pick a calculator, ask a money question, and get a chart you can change](media/calculators.gif)
 
----
+Free finance calculators inside Claude. Ask a money question. Get the math and
+a chart you can change. No account needed.
 
-## Get started in 2 steps
+## Install
 
-You'll need [Claude Code](https://claude.com/claude-code) (the desktop app or
-CLI) and an Amaltash account.
-
-### 1. Add the plugin in Claude Code
-Type these two commands into Claude Code:
+In Claude Code, run:
 
 ```
-/plugin marketplace add arpwal/amaltash-mcp-plugin
-/plugin install amaltash@amaltash
+/plugin marketplace add amaltash-hq/amaltash-mcp-plugin
+/plugin install calculators@amaltash
 ```
 
-### 2. Connect your account
-Run `/mcp`, pick **amaltash**, and choose **Authenticate**. Your browser opens
-to Amaltash — sign in if you aren't already, then click **Approve access**.
-That's it: Claude is connected, and it stays connected (the sign-in is
-remembered and refreshed for you — no token to paste, nothing to add to your
-shell).
+In the Claude app, add `https://tools.amaltash.com/mcp` as a custom connector.
 
-> Prefer a click-through guide with screenshots? Open
-> [`amaltash-plugin/install-guide.html`](amaltash-plugin/install-guide.html) in
-> your browser. Running in a headless or CI environment with no browser? See
-> [Headless / automated setup](#headless--automated-setup) below.
-
----
-
-## Free calculators (no sign-in)
-
-Free compound interest, investment, retirement, CD, S&P 500 and DCA
-calculators in your chat, with charts you can change.
-
-The plugin also adds a second server, **amaltash-calculators**
-(`https://tools.amaltash.com/mcp`). It needs no account and no sign-in.
-Try: *"How much will $500 a month grow to in 20 years?"*
-
-Docs: [amaltash.com/mcp/calculators](https://amaltash.com/mcp/calculators)
-
-Want only the calculators? Add them on their own:
+Prefer one shell command? This adds the same server without the plugin:
 
 ```bash
 claude mcp add --transport http amaltash-calculators https://tools.amaltash.com/mcp
 ```
 
----
+## What you can ask
 
-## Try it — sample prompts
+| Calculator | Ask things like | Learn more |
+|---|---|---|
+| Compound interest | What does $10,000 grow to at 5% in 10 years? | [Examples](docs/calculators/compound-interest.md) · [Docs](https://amaltash.com/mcp/calculators#compound-interest-heading) |
+| Investment | What could $500 a month grow to in 30 years? | [Examples](docs/calculators/investment.md) · [Docs](https://amaltash.com/mcp/calculators#investment-heading) |
+| Retirement | Can I retire at 60 with $800,000? | [Examples](docs/calculators/retirement.md) · [Docs](https://amaltash.com/mcp/calculators#retirement-heading) |
+| CD and high-yield savings | What will $5,000 earn in a 1-year CD at 4%? | [Examples](docs/calculators/cd-and-savings.md) · [Docs](https://amaltash.com/mcp/calculators#cd-savings-heading) |
+| Net worth | How does my net worth compare by age? | [Examples](docs/calculators/net-worth.md) · [Docs](https://amaltash.com/mcp/calculators#net-worth-heading) |
+| S&P 500 | What would $1,000 in the S&P 500 have become from 2000? | [Examples](docs/calculators/stock-returns-and-dca.md) · [Docs](https://amaltash.com/mcp/calculators#sp-500-heading) |
+| Stock return | What would $1,000 in Apple have become over 5 years? | [Examples](docs/calculators/stock-returns-and-dca.md) · [Docs](https://amaltash.com/mcp/calculators#stock-return-heading) |
+| DCA | What would $200 a month in VOO have become over 5 years? | [Examples](docs/calculators/stock-returns-and-dca.md) · [Docs](https://amaltash.com/mcp/calculators#dca-heading) |
+| Risk | If I lose 30%, what gain gets me back to even? | [Examples](docs/calculators/risk.md) · [Docs](https://amaltash.com/mcp/calculators#risk-heading) |
+| T-bill ladder | Build a 4-rung T-bill ladder with $40,000. | [Docs](https://amaltash.com/mcp/calculators#t-bill-heading) |
 
-Just talk to Claude normally. A few to get you going:
+## Where the numbers come from
 
-**Build & test a strategy**
-> "Create a momentum strategy on SPY that buys when the 50-day average crosses
-> above the 200-day, then backtest it over the last 5 years."
+- Real monthly prices for more than 12,000 US stocks and funds, updated nightly.
+- US market returns since 1928, from NYU Stern.
+- Median net worth by age, from the Federal Reserve's 2022 survey.
+- Every result shows how it was worked out and what it assumes.
 
-> "Backtest a strategy that rotates monthly into the top 3 performing sectors."
+## Trading
 
-> "My strategy's returns look weak — suggest a few ways to improve them and
-> re-test the best one."
+Have an Amaltash account? The `trading` plugin lets you run it from a
+conversation with Claude. Describe a strategy in plain English, have Claude
+backtest it, paper-trade it with $25,000 of simulated cash, add money from
+your linked bank, and check balances. It needs sign-in. It can never withdraw
+money. Withdrawals happen only in your Amaltash dashboard.
 
-**Practice with a paper account (simulated money)**
-> "Set me up with a paper trading account so I can try this risk-free."
+```
+/plugin marketplace add amaltash-hq/amaltash-mcp-plugin
+/plugin install trading@amaltash
+```
 
-> "Deploy that strategy to my paper account with $10,000."
+Then run `/mcp`, pick **amaltash**, and choose **Authenticate**. Approve access
+in the browser that opens. See the [trading guide](trading/README.md) for
+headless setup and more.
 
-**Go live & fund your account**
-> "What do I need to do to start trading for real?"  *(Claude gives you the
-> links to finish KYC and connect your bank.)*
+## Upgrading from `amaltash@amaltash`
 
-> "Connect my bank account."   ·   "Deposit $5,000 from my linked bank."
+The old `amaltash` plugin is now called `trading`. The calculators are now their
+own plugin.
 
-**Check on things**
-> "What's my account balance?"   ·   "How much of my cash can I withdraw right
-> now, and why?"
+1. Run `/plugin marketplace update amaltash`. Claude Code moves your old
+   `amaltash` install to `trading` for you.
+2. Run `/plugin install trading@amaltash` once to finish the move.
+3. To keep the calculators, run `/plugin install calculators@amaltash`.
 
-> "Show me my connected banks and my brokerage status."
-
----
-
-## What you can ask for
-
-| You want to… | Just ask |
-|---|---|
-| **Invent a strategy** from an idea in plain English | "Create a strategy that…" |
-| **Improve / fix a strategy** | "Fine-tune this to…" / "optimize the returns" |
-| **Backtest** over historical data | "Backtest it over the last 5 years" |
-| **Paper trade** with $25K simulated cash | "Set up a paper account" |
-| **Deploy** a strategy with real or simulated capital | "Deploy it with $X" |
-| **Stop** a running strategy | "Undeploy my strategy" |
-| **Finish onboarding** (KYC, bank, exchange) | "What's left to go live?" |
-| **Fund / withdraw** | "Deposit $X" / "Withdraw $X" |
-| **Check balances & status** | "What's my balance?" |
-
-> 🔒 **You're always in control of your money.** Claude will ask you to confirm
-> before any withdrawal or live deployment, and anything sensitive (identity
-> verification, connecting a bank, going live) is finished by you in your own
-> browser — never automatically.
-
----
+This repo moved from `arpwal/amaltash-mcp-plugin` to
+`amaltash-hq/amaltash-mcp-plugin`. The old address still forwards.
 
 ## Good to know
 
-- **Nothing runs on your computer.** The plugin connects to Amaltash's secure
-  hosted service over HTTPS; there's no software to install or update.
-- **One-click, secure sign-in.** Connecting uses OAuth — the same standard
-  "Sign in with…" flow you know from the web. Claude never sees your password,
-  and the access it's granted is stored encrypted on your machine and refreshed
-  automatically. Revoke it any time from **Settings → Security → Claude
-  connector** in your dashboard (or `/mcp` → amaltash → Clear authentication).
-- **Questions or issues?** See the
-  [install & troubleshooting guide](amaltash-plugin/install-guide.html) or visit
-  [amaltash.com](https://amaltash.com).
+Results are for education only. They are not investment advice or a promise of
+future results. Projections are hypothetical. You can lose money.
 
----
-
-## Headless / automated setup
-
-Most people should use the one-click browser flow above. But if you're running
-Claude where **no browser is available** (a server, CI, a container), connect
-with a personal token instead:
-
-1. In your dashboard, open **Settings → Security → Claude connector** and click
-   **Create token** (copy it — it's shown once and looks like `amat_…`).
-2. Add the connector with that token as a Bearer header:
-
-   ```bash
-   claude mcp add --transport http amaltash \
-     https://mcp.amaltash.com/mcp \
-     --header "Authorization: Bearer amat_…"
-   ```
-
-The token can be revoked or rotated any time from the same dashboard screen.
+Published by [Amaltash Advisors LLC](https://amaltash.com).
+[Privacy](https://amaltash.com/policies/privacy#calculators-connector) ·
+[Support](https://amaltash.com/contact)
