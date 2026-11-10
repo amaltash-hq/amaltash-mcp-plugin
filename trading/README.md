@@ -14,16 +14,17 @@ at `https://mcp.amaltash.com` — nothing runs locally.
 - **Onboarding** — check `connection_status`; get deep-links to finish **KYC**
   (kyc.amaltash.com), connect a **US bank via Plaid**, or connect a **live
   exchange** (OAuth).
-- **Funding** — list connected banks, deposit (ACH / wire), withdraw (ACH),
-  and read your balance plus *why* part of your cash isn't withdrawable yet.
+- **Funding** — list connected banks, deposit (ACH / wire), and read your
+  balance plus *why* part of your cash isn't withdrawable yet. Claude can
+  never withdraw money; withdrawals happen only in your Amaltash dashboard.
 
 ## Free calculators (no sign-in)
 
 Free compound interest, investment, retirement, CD, S&P 500 and DCA
 calculators in your chat, with charts you can change.
 
-The bundled `.mcp.json` also registers **amaltash-calculators** at
-`https://tools.amaltash.com/mcp`: public, read-only, no account or token.
+They are a separate plugin in this marketplace, with no account or token:
+`/plugin install calculators@amaltash`. See the [main README](../README.md).
 Docs: [amaltash.com/mcp/calculators](https://amaltash.com/mcp/calculators)
 
 ## Install
@@ -33,8 +34,8 @@ Docs: [amaltash.com/mcp/calculators](https://amaltash.com/mcp/calculators)
 
 1. **Add the plugin** in Claude Code:
    ```
-   /plugin marketplace add arpwal/amaltash-mcp-plugin
-   /plugin install amaltash@amaltash
+   /plugin marketplace add amaltash-hq/amaltash-mcp-plugin
+   /plugin install trading@amaltash
    ```
 2. **Connect** — run `/mcp`, pick **amaltash**, choose **Authenticate**, and
    approve in the browser that opens. No token to copy.

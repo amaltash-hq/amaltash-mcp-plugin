@@ -1,14 +1,23 @@
 {
   "name": "amaltash",
+  "description": "Amaltash for Claude: free investment and retirement calculators, and trading for Amaltash account holders.",
   "owner": {
-    "name": "Amaltash",
+    "name": "Amaltash Advisors LLC",
     "url": "https://amaltash.com"
   },
   "plugins": [
     {
-      "name": "amaltash",
-      "source": "./amaltash-plugin",
-      "description": "Trade on Amaltash from Claude: connect in one click with OAuth, then create/backtest/fine-tune/deploy strategies, provision a $25K paper account, finish KYC, connect banks via Plaid, and manage deposits/withdrawals via the Amaltash MCP server. Also adds free investment and retirement calculators (no sign-in)."
+      "name": "calculators",
+      "source": "./calculators",
+      "description": "Free compound interest, investment, retirement, CD, S&P 500 and DCA calculators in your chat, with charts you can change. No sign-in."
+    },
+    {
+      "name": "trading",
+      "source": "./trading",
+      "description": "Trade on Amaltash from Claude: connect in one click with OAuth, then create/backtest/fine-tune/deploy strategies, provision a $25K paper account, finish KYC, connect banks via Plaid, deposit from a linked bank, and check balances via the Amaltash MCP server. It can never withdraw money."
     }
-  ]
+  ],
+  "renames": {
+    "amaltash": "trading"
+  }
 }

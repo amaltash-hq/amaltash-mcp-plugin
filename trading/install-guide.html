@@ -97,10 +97,10 @@
   <h2><span class="n">2</span>Add the plugin marketplace &amp; install</h2>
   <p>Run these inside Claude Code:</p>
   <pre><code><span class="cmt"># Register the marketplace straight from GitHub</span>
-/plugin marketplace add arpwal/amaltash-mcp-plugin
+/plugin marketplace add amaltash-hq/amaltash-mcp-plugin
 
 <span class="cmt"># Install the plugin (plugin@marketplace)</span>
-/plugin install amaltash@amaltash</code></pre>
+/plugin install trading@amaltash</code></pre>
 
   <h2><span class="n">3</span>Connect your account</h2>
   <p>Open the MCP panel, pick <code>amaltash</code>, and choose
@@ -143,12 +143,13 @@
       <tr><td>Brokerage status</td><td><code>get_brokerage_status</code></td></tr>
       <tr><td>Balance</td><td><code>get_account_balance</code> · <code>balance_detail</code></td></tr>
       <tr><td>Connected banks</td><td><code>list_banks</code></td></tr>
-      <tr><td>Add / take out money</td><td><code>deposit_funds</code> · <code>withdraw_funds</code> <span class="pill">confirm</span></td></tr>
+      <tr><td>Add money</td><td><code>deposit_funds</code> <span class="pill">confirm</span></td></tr>
     </tbody>
   </table>
   <div class="note warn">
-    <span class="lbl">Money moves need confirmation.</span> <code>withdraw_funds</code> (and live
-    <code>deploy_strategy</code>) only execute after you explicitly approve the amount. KYC, Plaid
+    <span class="lbl">Money moves need confirmation.</span> Deposits and live
+    <code>deploy_strategy</code> only execute after you explicitly approve the amount. Claude can never
+    withdraw money; withdrawals happen only in your Amaltash dashboard. KYC, Plaid
     bank-connect, and live-exchange OAuth finish in your browser via <code>connect_links</code> — not headlessly.
   </div>
 
