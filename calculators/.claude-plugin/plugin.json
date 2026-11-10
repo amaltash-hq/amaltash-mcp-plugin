@@ -9,7 +9,7 @@
   },
   "homepage": "https://amaltash.com/mcp/calculators",
   "privacyPolicyUrl": "https://amaltash.com/policies/privacy#calculators-connector",
-  "repository": "https://github.com/amaltash-hq/amaltash-mcp-plugin",
+  "repository": "https://github.com/amaltash-hq/mcp",
   "keywords": [
     "calculators",
     "compound-interest",
