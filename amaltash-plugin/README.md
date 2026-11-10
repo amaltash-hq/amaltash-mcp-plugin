@@ -17,6 +17,15 @@ at `https://mcp.amaltash.com` — nothing runs locally.
 - **Funding** — list connected banks, deposit (ACH / wire), withdraw (ACH),
   and read your balance plus *why* part of your cash isn't withdrawable yet.
 
+## Free calculators (no sign-in)
+
+Free compound interest, investment, retirement, CD, S&P 500 and DCA
+calculators in your chat, with charts you can change.
+
+The bundled `.mcp.json` also registers **amaltash-calculators** at
+`https://tools.amaltash.com/mcp`: public, read-only, no account or token.
+Docs: [amaltash.com/mcp/calculators](https://amaltash.com/mcp/calculators)
+
 ## Install
 
 > A step-by-step walkthrough lives in [`install-guide.html`](install-guide.html)
