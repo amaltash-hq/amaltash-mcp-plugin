@@ -9,7 +9,7 @@ This plugin adds one server, **amaltash-calculators**, at
 ## Install
 
 ```
-/plugin marketplace add amaltash-hq/amaltash-mcp-plugin
+/plugin marketplace add amaltash-hq/mcp
 /plugin install calculators@amaltash
 ```
 

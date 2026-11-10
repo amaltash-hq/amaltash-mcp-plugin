@@ -34,7 +34,7 @@ Docs: [amaltash.com/mcp/calculators](https://amaltash.com/mcp/calculators)
 
 1. **Add the plugin** in Claude Code:
    ```
-   /plugin marketplace add amaltash-hq/amaltash-mcp-plugin
+   /plugin marketplace add amaltash-hq/mcp
    /plugin install trading@amaltash
    ```
 2. **Connect** — run `/mcp`, pick **amaltash**, choose **Authenticate**, and

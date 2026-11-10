@@ -16,8 +16,5 @@
       "source": "./trading",
       "description": "Trade on Amaltash from Claude: connect in one click with OAuth, then create/backtest/fine-tune/deploy strategies, provision a $25K paper account, finish KYC, connect banks via Plaid, deposit from a linked bank, and check balances via the Amaltash MCP server. It can never withdraw money."
     }
-  ],
-  "renames": {
-    "amaltash": "trading"
-  }
+  ]
 }

@@ -10,7 +10,7 @@ a chart you can change. No account needed.
 In Claude Code, run:
 
 ```
-/plugin marketplace add amaltash-hq/amaltash-mcp-plugin
+/plugin marketplace add amaltash-hq/mcp
 /plugin install calculators@amaltash
 ```
 
@@ -53,26 +53,13 @@ your linked bank, and check balances. It needs sign-in. It can never withdraw
 money. Withdrawals happen only in your Amaltash dashboard.
 
 ```
-/plugin marketplace add amaltash-hq/amaltash-mcp-plugin
+/plugin marketplace add amaltash-hq/mcp
 /plugin install trading@amaltash
 ```
 
 Then run `/mcp`, pick **amaltash**, and choose **Authenticate**. Approve access
 in the browser that opens. See the [trading guide](trading/README.md) for
 headless setup and more.
-
-## Upgrading from `amaltash@amaltash`
-
-The old `amaltash` plugin is now called `trading`. The calculators are now their
-own plugin.
-
-1. Run `/plugin marketplace update amaltash`. Claude Code moves your old
-   `amaltash` install to `trading` for you.
-2. Run `/plugin install trading@amaltash` once to finish the move.
-3. To keep the calculators, run `/plugin install calculators@amaltash`.
-
-This repo moved from `arpwal/amaltash-mcp-plugin` to
-`amaltash-hq/amaltash-mcp-plugin`. The old address still forwards.
 
 ## Good to know
 
