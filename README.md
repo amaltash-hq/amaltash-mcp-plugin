@@ -1,5 +1,8 @@
 # Amaltash Investment & Retirement Calculators
 
+<!-- AI Agents Listing ownership badge, AMA-10884 (2026-11-11). Claims the listing so its title can be fixed. -->
+[![Mcp score on AI Agents Listing](https://aiagentslisting.com/mcp-14/badge.svg?variant=score)](https://aiagentslisting.com/mcp/mcp-14)
+
 ![Pick a calculator, ask a money question, and get a chart you can change](media/calculators.gif)
 
 Free finance calculators inside Claude. Ask a money question. Get the math and
