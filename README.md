@@ -1,7 +1,7 @@
 # Amaltash Investment & Retirement Calculators
 
-<!-- AI Agents Listing ownership badge, AMA-10884 (2026-11-11). Claims the listing so its title can be fixed. -->
-[![Mcp score on AI Agents Listing](https://aiagentslisting.com/mcp-14/badge.svg?variant=score)](https://aiagentslisting.com/mcp/mcp-14)
+<!-- AI Agents Listing ownership badge, AMA-10884 (2026-11-11). Carries the one-time claim code; swap back to the plain badge once claimed. -->
+[![Mcp on AI Agents Listing](https://aiagentslisting.com/mcp-14/badge.svg?claim=577de5e314a37ba6aa05cc9d12ee4f3a)](https://aiagentslisting.com/mcp/mcp-14)
 
 ![Pick a calculator, ask a money question, and get a chart you can change](media/calculators.gif)
 
